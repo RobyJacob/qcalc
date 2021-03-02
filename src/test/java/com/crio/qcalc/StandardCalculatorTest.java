@@ -9,7 +9,12 @@ import org.junit.jupiter.api.function.Executable;
 
 public class StandardCalculatorTest {
 
-
+	@Test
+	void testAdd() {
+		StandardCalculator calc = new StandardCalculator();
+		calc.add(1, 1);
+		assertEquals(2, calc.getResult());
+	}
 
 
 	@Test
