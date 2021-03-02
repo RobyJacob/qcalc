@@ -1,7 +1,7 @@
 package com.crio.qcalc;
 
 public class StandardCalculator {
-    protected int result;
+    protected double result;
 
     public void add(int a, int b) {
         long tmp = (long) a + (long) b;
@@ -12,12 +12,22 @@ public class StandardCalculator {
     }
 
     public void subtract(int a, int b) {
-        if ((a - b) < Integer.MIN_VALUE) throw new ArithmeticException();
+        long tmp = (long) a - (long) b;
+
+        if (tmp < Integer.MIN_VALUE) throw new ArithmeticException();
 
         this.result = a - b;
     }
 
-    public int getResult() {
+    public void multiply(int a, int b) {
+        this.result = a * b;
+    }
+
+    public void divide(int a, int b) {
+        this.result = (double) (a / b);
+    }
+
+    public double getResult() {
         return this.result;
     }
 

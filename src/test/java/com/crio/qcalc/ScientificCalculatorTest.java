@@ -1,4 +1,3 @@
-
 package com.crio.qcalc;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;

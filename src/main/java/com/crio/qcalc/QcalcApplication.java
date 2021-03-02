@@ -8,9 +8,9 @@ public class QcalcApplication {
 
 	public static void main(String[] args) {
 		// SpringApplication.run(QcalcApplication.class, args);
-		StandardCalculator calc = new StandardCalculator();
+		ScientificCalculator calc = new ScientificCalculator();
 
-		calc.add(1, 1);
+		calc.add(1d, 1d);
 
 		System.out.println(calc.getResult());
 	}
