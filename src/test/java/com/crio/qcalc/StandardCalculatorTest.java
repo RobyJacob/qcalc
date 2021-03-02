@@ -16,6 +16,13 @@ public class StandardCalculatorTest {
 		assertEquals(2, calc.getResult());
 	}
 
+	@Test
+	void testResult() {
+		StandardCalculator calc = new StandardCalculator();
+		calc.add(2, 2);
+		calc.subtract(1, 1);
+		assertEquals(0, calc.getResult());
+	}
 
 	@Test
 	void testAdditionOverflow() {
@@ -28,6 +35,16 @@ public class StandardCalculatorTest {
 		});
 	}
 
+	@Test
+	void testSubtractionUnderflow() {
+		StandardCalculator calc = new StandardCalculator();
+		assertThrows(ArithmeticException.class, new Executable(){
+			@Override
+			public void execute() throws Throwable {
+				calc.subtract(Integer.MIN_VALUE, 1);
+			}
+		});
+	}
 
 }
 
