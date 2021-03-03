@@ -24,7 +24,7 @@ public class StandardCalculator {
     }
 
     public void divide(int a, int b) {
-        this.result = (double) (a / b);
+        this.result = (double) a / (double) b;
     }
 
     public double getResult() {

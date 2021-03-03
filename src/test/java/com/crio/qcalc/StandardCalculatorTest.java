@@ -17,6 +17,13 @@ public class StandardCalculatorTest {
 	}
 
 	@Test
+	void testDivide() {
+		StandardCalculator calc = new StandardCalculator();
+		calc.divide(3, 2);
+		assertEquals(1.5, calc.getResult());
+	}
+
+	@Test
 	void testResult() {
 		StandardCalculator calc = new StandardCalculator();
 		calc.add(2, 2);
